@@ -3,3 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
 	$('#quote').tokenInput '/quotes.json', crossDomain: false;
+$ ->
+$('.best_in_place').best_in_place();

@@ -4,11 +4,12 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
+	  @quotes = @quotes.paginate(:per_page => 5, :page => params[:page])
     @quotes = (!params[:quote].blank?)? Quote.where("id in (" + params[:quote] + ")") : Quote.all
     @quotes_json = Quote.where("content ilike ?", "%#{params[:q]}%")
     respond_to do |format|
 			format.html # index.html.erb
-			format.json { render json: custom_json_for(@quotes)}
+			format.json { render json: custom_json_for(@quotes_json)}
 		end
   end
 

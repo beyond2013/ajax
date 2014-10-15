@@ -1,9 +1,9 @@
 <h1>Listing quotes</h1>
-<%= form_tag "/quotes", method: "get" do %>
-<%= label_tag(:quote, "Search: ") %>
-<%= text_field_tag(:quote) %>
-<%= submit_tag("Search") %>
-<% end %>
+	<%= form_tag "/quotes", method: "get" do %>
+		<%= label_tag(:quote, "Search: ") %>
+		<%= text_field_tag(:quote) %>
+		<%= submit_tag("Search") %>
+	<% end %>
 <table>
   <thead>
     <tr>
@@ -15,7 +15,7 @@
   <tbody>
     <% @quotes.each do |quote| %>
       <tr>
-        <td><%= quote.content %></td>
+        <td><%= best_in_place quote, :content %></td>
         <td><%= link_to 'Show', quote %></td>
         <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
         <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,7 +23,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @quotes, :class => 'digg' %>
 <br>
 
 <%= link_to 'New Quote', new_quote_path %>

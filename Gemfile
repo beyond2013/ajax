@@ -4,7 +4,8 @@ source 'https://rubygems.org'
  gem 'jquery-tokeninput-rails'
 # gem for in place editing
  gem 'best_in_place', github: 'bernat/best_in_place'
- 
+# gem for pagination
+ gem 'will_paginate' 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record

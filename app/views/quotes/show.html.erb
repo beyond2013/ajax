@@ -2,7 +2,8 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @quote.content %>
+	<%= best_in_place @quote, :content %>
+  
 </p>
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |

@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # jquery gem for Autocomplete 
  gem 'jquery-tokeninput-rails'
 # gem for in place editing
-gem 'best_in_place', github: 'bernat/best_in_place'
+ gem 'best_in_place', github: 'bernat/best_in_place'
  
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
